@@ -6,8 +6,6 @@ document.getElementById("chatIdInput").value = localStorage.getItem("chatId");
 const messageInput = document.getElementById("messageInput");
 const sendButton = document.getElementById("sendButton");
 
-sendButton.addEventListener("click", sendMessage);
-
 const sendMessage = () => {
     const message = messageInput.value;
     if (message) {
@@ -38,6 +36,8 @@ const sendMessage = () => {
             });
     }
 };
+
+sendButton.addEventListener("click", sendMessage);
 
 const toggleMenuIcon = document.getElementById("toggleMenu");
 const menuBar = document.querySelector(".menu-container");
