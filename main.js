@@ -25,12 +25,14 @@ function sendMessage() {
             body: JSON.stringify(data),
         })
             .then((response) => response.json())
+            .then(() => {
+                const notification = document.getElementById("notification-send");
+                notification.style.display = "block";
+            })
             .catch((error) => {
                 console.error("Error sending message:", error);
             });
     }
-    const notification = document.getElementById("notification-send");
-    notification.style.display = "block";
 
     setTimeout(function () {
         notification.style.display = "none";
