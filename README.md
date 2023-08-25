@@ -8,4 +8,4 @@ A simple note-taking app that saves the note to telegram.
 3. Follow the prompts to choose a name and username for your bot.
 4. Once your bot is created, BotFather will provide you with an API token. 
 5. Start your bot.
-6. Go to `https://api.telegram.org/bot${botToken}/sendMessage` and you will get `chatId`.
+6. Go to `https://api.telegram.org/botYOURAPI/getUpdates`, replace YOURAPI with your token and you will get `chatId`.
