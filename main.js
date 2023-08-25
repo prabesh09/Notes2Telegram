@@ -28,15 +28,15 @@ const sendMessage = () => {
             .then(() => {
                 const notification = document.getElementById("notification-send");
                 notification.style.display = "block";
+
+                setTimeout(() => {
+                    notification.style.display = "none";
+                }, 2000);
             })
             .catch((error) => {
                 console.error("Error sending message:", error);
             });
     }
-
-    setTimeout(() => {
-        notification.style.display = "none";
-    }, 2000);
 };
 
 const toggleMenuIcon = document.getElementById("toggleMenu");
