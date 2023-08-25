@@ -8,7 +8,7 @@ const sendButton = document.getElementById("sendButton");
 
 sendButton.addEventListener("click", sendMessage);
 
-function sendMessage() {
+const sendMessage = () => {
     const message = messageInput.value;
     if (message) {
         const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -34,10 +34,10 @@ function sendMessage() {
             });
     }
 
-    setTimeout(function () {
+    setTimeout(() => {
         notification.style.display = "none";
     }, 2000);
-}
+};
 
 const toggleMenuIcon = document.getElementById("toggleMenu");
 const menuBar = document.querySelector(".menu-container");
@@ -68,12 +68,12 @@ document.getElementById("saveValue").addEventListener("click", () => {
     const notification = document.getElementById("notification-save");
     notification.style.display = "block";
 
-    setTimeout(function () {
+    setTimeout(() => {
         notification.style.display = "none";
     }, 2000);
 });
 
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", (event) => {
     if (event.shiftKey && event.key === "Enter") {
         event.preventDefault();
         sendButton.click();
