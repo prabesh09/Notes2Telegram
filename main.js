@@ -1,6 +1,6 @@
-const botToken = localStorage.getItem("botToken");
+let botToken = localStorage.getItem("botToken");
 document.getElementById("botTokenInput").value = localStorage.getItem("botToken");
-const chatId = localStorage.getItem("chatId");
+let chatId = localStorage.getItem("chatId");
 document.getElementById("chatIdInput").value = localStorage.getItem("chatId");
 
 const messageInput = document.getElementById("messageInput");
@@ -56,8 +56,8 @@ messageInput.addEventListener("input", () => {
 
 // Local Storage
 const storeValue = () => {
-    const botToken = document.getElementById("botTokenInput").value;
-    const chatId = document.getElementById("chatIdInput").value;
+    botToken = document.getElementById("botTokenInput").value;
+    chatId = document.getElementById("chatIdInput").value;
 
     localStorage.setItem("botToken", botToken);
     localStorage.setItem("chatId", chatId);
