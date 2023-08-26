@@ -47,6 +47,7 @@ textarea {
     font-size: 30px;
     resize: none;
     font-family: var(--Courgette);
+    overflow: visible;
 }
 
 button {
